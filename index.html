@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tmsa Movie</title>
+  <title>Tmsa Movie - made by turhan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -510,7 +510,7 @@
 <!-- ═══════ POPUP ═══════ -->
 <div id="popup-overlay">
   <div id="popup-box">
-    <div class="popup-logo">Yhujin<span>Movie</span></div>
+    <div class="popup-logo">Tmsa<span>Movie</span></div>
     <div class="popup-divider"></div>
     <div class="popup-title">Welcome</div>
     <div class="popup-body">
@@ -534,7 +534,7 @@
 
 <!-- ═══════ DESKTOP NAV ═══════ -->
 <nav id="desktopNav">
-  <div class="nav-logo" onclick="backToHome()">Yhujin<span>Movie</span></div>
+  <div class="nav-logo" onclick="backToHome()">Tmsa<span>Movie</span></div>
   <div class="nav-center">
     <div class="search-wrap">
       <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
@@ -590,9 +590,9 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="footer-logo">Yhujin<span>Movie</span></div>
+      <div class="footer-logo">Tmsa<span>Movie</span></div>
       <p>Free streaming platform for movies and TV shows, available anytime.</p>
-      <p style="margin-top:.4rem;">Made by <strong style="color:rgba(255,255,255,.7);">Yhujin</strong> &middot; Team <strong style="color:rgba(255,255,255,.7);">Dust Collector</strong></p>
+      <p style="margin-top:.4rem;">Made by <strong style="color:rgba(255,255,255,.7);">Tmsa</strong> &middot; Team <strong style="color:rgba(255,255,255,.7);">Dust Collector</strong></p>
     </div>
     <div class="footer-links">
       <h4>Community &amp; Tools</h4>
@@ -647,7 +647,7 @@
 
   <!-- Top bar -->
   <div class="m-topbar">
-    <div class="m-topbar-logo" id="mLogo" onclick="mobileGoHome()">Yhujin<span>Movie</span></div>
+    <div class="m-topbar-logo" id="mLogo" onclick="mobileGoHome()">Tmsa<span>Movie</span></div>
     <div class="m-topbar-search">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       <input type="text" id="mSearchBox" placeholder="Search movies or shows...">
@@ -742,7 +742,7 @@ const MOBILE_ICON  = `<rect x="5" y="2" width="14" height="20" rx="2"/><line x1=
 function toggleMode() {
   isMobile = !isMobile;
   applyMode();
-  localStorage.setItem('yhujin-mode', isMobile ? 'mobile' : 'desktop');
+  localStorage.setItem('Tmsa-mode', isMobile ? 'mobile' : 'desktop');
   if (isMobile) mobileLoadHome();
   else loadCategories();
 }
@@ -755,7 +755,7 @@ function applyMode() {
 }
 
 function initMode() {
-  isMobile = localStorage.getItem('yhujin-mode') === 'mobile';
+  isMobile = localStorage.getItem('Tmsa-mode') === 'mobile';
   applyMode();
 }
 
