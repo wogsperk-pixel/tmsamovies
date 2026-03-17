@@ -68,14 +68,6 @@
     .popup-body strong { color:rgba(255,255,255,.85); }
     .popup-btns { display:flex; flex-direction:column; gap:.55rem; }
 
-    .btn-discord-popup {
-      display:flex; align-items:center; justify-content:center; gap:.5rem;
-      padding:.72rem 1.2rem; background:var(--discord); color:#fff; border:none;
-      border-radius:10px; font-family:'DM Sans',sans-serif; font-size:.9rem; font-weight:600;
-      cursor:pointer; text-decoration:none; transition:filter .2s,transform .15s;
-    }
-    .btn-discord-popup:hover { filter:brightness(1.15); transform:translateY(-1px); }
-
     .btn-adblocker {
       display:flex; align-items:center; justify-content:center; gap:.5rem;
       padding:.66rem 1.2rem; background:transparent;
@@ -132,14 +124,6 @@
       transition:background .2s,color .2s,border-color .2s;
     }
     .mode-toggle:hover { background:rgba(255,255,255,.12); color:#fff; border-color:rgba(255,255,255,.25); }
-
-    .nav-discord-btn {
-      display:flex; align-items:center; gap:.4rem;
-      padding:.42rem .9rem; background:var(--discord); color:#fff; border:none;
-      border-radius:8px; font-family:'DM Sans',sans-serif; font-size:.8rem; font-weight:600;
-      cursor:pointer; text-decoration:none; transition:filter .2s; white-space:nowrap;
-    }
-    .nav-discord-btn:hover { filter:brightness(1.18); }
 
     /* ═══════════════════════════════════════
        DESKTOP HERO
@@ -283,7 +267,6 @@
     .footer-links h4 { font-size:.67rem; text-transform:uppercase; letter-spacing:.14em; color:var(--muted); margin-bottom:.75rem; }
     .footer-links a { display:flex; align-items:center; gap:.45rem; color:rgba(255,255,255,.58); text-decoration:none; font-size:.82rem; margin-bottom:.5rem; transition:color .2s; }
     .footer-links a:hover { color:#fff; }
-    .dc-pill { display:inline-flex; align-items:center; gap:.3rem; background:var(--discord); color:#fff; padding:2px 7px; border-radius:4px; font-size:.65rem; font-weight:600; }
     .footer-copy { text-align:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.06); font-size:.7rem; color:rgba(255,255,255,.16); }
 
     /* ═══════════════════════════════════════
@@ -335,13 +318,6 @@
       background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.1);
       border-radius:20px; color:#fff; font-family:'DM Sans',sans-serif; font-size:.82rem; outline:none;
       transition:background .2s,border-color .2s;
-    }
-    #mSearchBox::placeholder { color:var(--muted); }
-    #mSearchBox:focus { background:rgba(255,255,255,.12); border-color:rgba(255,255,255,.25); }
-    .m-topbar-dc {
-      width:32px; height:32px; border-radius:50%; background:var(--discord);
-      display:flex; align-items:center; justify-content:center; flex-shrink:0;
-      text-decoration:none;
     }
 
     /* Scroll area */
@@ -508,6 +484,9 @@
 <body>
 
 <!-- ═══════ POPUP ═══════ -->
+<!-- ONLY showing changed parts to keep this readable -->
+
+<!-- ═══════ POPUP (cleaned) ═══════ -->
 <div id="popup-overlay">
   <div id="popup-box">
     <div class="popup-logo">Tmsa<span>Movie - by turhan</span></div>
@@ -515,46 +494,33 @@
     <div class="popup-title">Welcome</div>
     <div class="popup-body">
       Stream movies and TV shows for free, anytime.<br><br>
-      <strong>Join our community</strong> on Discord to request movies, get updates, and connect with other members!<br><br>
+      Enjoy unlimited entertainment with a clean and simple experience.<br><br>
       <strong>Seeing ads?</strong> Install <a href="https://ublockorigin.com/" target="_blank">uBlock Origin</a> for an uninterrupted watching experience.
     </div>
     <div class="popup-btns">
-      <a class="btn-discord-popup" href="https://discord.com/invite/4K8eJztN7W" target="_blank">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-        Join Discord Community
-      </a>
       <a class="btn-adblocker" href="https://ublockorigin.com/" target="_blank">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Install uBlock Origin — Block Ads
       </a>
       <button class="btn-skip" onclick="closePopup()">Skip, start watching</button>
     </div>
   </div>
 </div>
-
 <!-- ═══════ DESKTOP NAV ═══════ -->
 <nav id="desktopNav">
   <div class="nav-logo" onclick="backToHome()">Tmsa<span>Movie - by turhan</span></div>
+
   <div class="nav-center">
     <div class="search-wrap">
-      <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" id="searchBox" placeholder="Search movies or shows..." aria-label="Search">
+      <input type="text" id="searchBox" placeholder="Search movies or shows...">
     </div>
   </div>
+
   <div class="nav-right">
     <button class="mode-toggle" id="modeToggle" onclick="toggleMode()">
-      <svg id="modeIcon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
-      </svg>
       <span id="modeLabel">Mobile View</span>
     </button>
-    <a class="nav-discord-btn" href="https://discord.com/invite/4K8eJztN7W" target="_blank">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-      <span>Discord</span>
-    </a>
   </div>
 </nav>
-
 <!-- ═══════ DESKTOP HERO ═══════ -->
 <section id="heroSection">
   <div id="heroBg"></div>
@@ -595,19 +561,12 @@
       <p style="margin-top:.4rem;">Made by <strong style="color:rgba(255,255,255,.7);">Tmsa</strong> &middot; Team <strong style="color:rgba(255,255,255,.7);">Tmsa Movie - by turhan</strong></p>
     </div>
     <div class="footer-links">
-      <h4>Community &amp; Tools</h4>
-      <a href="https://discord.com/invite/4K8eJztN7W" target="_blank">
-        <span class="dc-pill">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-          Discord
-        </span>
-        Tmsa Movie - by turhan
-      </a>
-      <a href="https://ublockorigin.com/" target="_blank">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        uBlock Origin — Block Ads
-      </a>
-    </div>
+  <h4>Tools</h4>
+
+  <a href="https://ublockorigin.com/" target="_blank">
+    uBlock Origin — Block Ads
+  </a>
+</div>
   </div>
   <div class="footer-copy">2025 Tmsa Movie - by turhan. All rights reserved.</div>
 </footer>
@@ -647,15 +606,12 @@
 
   <!-- Top bar -->
   <div class="m-topbar">
-    <div class="m-topbar-logo" id="mLogo" onclick="mobileGoHome()">Tmsa<span>Movie - by turhan</span></div>
-    <div class="m-topbar-search">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" id="mSearchBox" placeholder="Search movies or shows...">
-    </div>
-    <a class="m-topbar-dc" href="https://discord.com/invite/4K8eJztN7W" target="_blank" title="Join Discord">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
-    </a>
+  <div class="m-topbar-logo" onclick="mobileGoHome()">Tmsa<span>Movie - by turhan</span></div>
+
+  <div class="m-topbar-search">
+    <input type="text" id="mSearchBox" placeholder="Search movies or shows...">
   </div>
+</div>
 
   <!-- Scrollable content area -->
   <div class="m-content" id="mContent">
